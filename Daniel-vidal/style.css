@@ -154,6 +154,16 @@ p{
     color:var(--white-color);
     background: var(--linear-gradient-hover);
 }
+.switch{
+    background:transparent;
+    border:none;
+    padding:0;
+   }
+  .switch svg{
+    width:2.5rem;
+    border-radius:50%;
+    box-shadow:var(--box-shadow);
+  } 
 
 @media screen and (min-width:1024px){
     .menu-btn{
@@ -178,6 +188,10 @@ p{
     .menu a:hover{
         background: transparent;
     }
+    .switch svg{
+        width:1.5rem;
+      }
+
 }
 
 
@@ -280,6 +294,8 @@ body{
     background-image: url("assets/montanas.svg");
     background-attachment: fixed;
     background-size: cover;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
 }
 h2.titulos{
     font-size: 2rem;
@@ -761,6 +777,7 @@ align-items: center;
     display: grid;
     grid-template-columns: repeat(2,50%);
     padding:0;
+    padding-bottom:3rem;
     }
     .projects .project{
         margin-bottom:0rem;
@@ -768,6 +785,7 @@ align-items: center;
     .projects> .container .titulos{
     grid-column: span 2;
     margin-bottom: 2rem;
+    margin-top:2rem;
     }
     .projects_hover > div .projects_title{
     margin-top:1rem;
@@ -831,6 +849,7 @@ align-items: center;
     width: 100%;
     min-height: 90vh;
     background:var(--white-color);
+
     }
     .start_container{
     width: 90%;
@@ -984,9 +1003,146 @@ align-items: center;
 
 
 
+
+      body.dark {
+        /* background: #111111; */
+        /* background: #222222; */
+        -webkit-transition: .3s ease all;
+        transition: .3s ease all;
+      }
+      
+      body.dark .start_title{
+        color:#1dcccc;
+        -webkit-transition: .3s ease all;
+        transition: .3s ease all;
+    }
+
+    body.dark .start_title i{
+        color:#fff;
+        -webkit-transition: .3s ease all;
+        transition: .3s ease all;
+    }
+
+    body.dark .about{
+        background: #222222;
+        -webkit-transition: .3s ease all;
+        transition: .3s ease all;
+    }
+
+    body.dark h2.titulos{
+        color:#1dcccc;
+        -webkit-transition: .3s ease all;
+        transition: .3s ease all;
+    }
     
+    body.dark p{
+        color:#fff;
+        -webkit-transition: .3s ease all;
+        transition: .3s ease all;
+    }
+       
+    body.dark .projects{
+        background:#272727;
+        -webkit-transition: .3s ease all;
+        transition: .3s ease all;
+    }
+    
+    body.dark .inicio{
+        background: #222222;
+        -webkit-transition: .3s ease all;
+        transition: .3s ease all;
+    }
+
+    body.dark .skills{
+        background: #222222d8;
+        -webkit-transition: .3s ease all;
+        transition: .3s ease all;
+    }
+
+    body.dark .skills> .container .article>h3{
+        color:#fff;
+         -webkit-transition: .3s ease all;
+         transition: .3s ease all;
+     }
+
+    body.dark .contact{
+        background: #222222d8;
+        -webkit-transition: .3s ease all;
+        transition: .3s ease all;
+    }
+    body.dark .contact .container{
+        background:rgba(0, 0, 0, 0.5);
+        -webkit-transition: .3s ease all;
+        transition: .3s ease all;
+    }
+    body.dark .arrow-down{
+        background: #222222d8;
+        -webkit-transition: .3s ease all;
+        transition: .3s ease all;
+    }
+    body.dark .projects .informacion{
+        color:#1dcccc;
+        background:#222222;
+        -webkit-transition: .3s ease all;
+        transition: .3s ease all;
+    }
+      
+    .switch {
+        cursor: pointer;
+        outline: none;
+      }
+
+      /* .switch {
+        background: #343D5B;
+        border-radius: 1000px;
+        border: none;
+        position: relative;
+        cursor: pointer;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        outline: none;
+      } */
+/*       
+      .switch::after {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background: #F1F1F1;
+        top: 0;
+        left: 0;
+        right: unset;
+        border-radius: 100px;
+        -webkit-transition: .3s ease all;
+        transition: .3s ease all;
+        -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+                box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+      }
+       */
 
 
+
+      /* .switch.active {
+        background: orange;
+        color: #000;
+      }
+      
+      .switch.active::after {
+        right: 0;
+        left: unset;
+      } */
+      
+      /* .switch span {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        display: block;
+        background: none;
+        color: #fff;
+      } */
+      
       
         
         

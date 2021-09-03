@@ -209,3 +209,40 @@ function mostrarScroll2(){
 window.addEventListener('scroll',mostrarScroll2);
 })(document);
 
+
+// ANIMATION START
+((d)=> {
+const $btnMenu = d.querySelector(".menu-btn");
+const $btnSwitch = d.querySelector('#switch');
+$menu_dos = d.querySelector(".menu");
+
+$btnSwitch.addEventListener('click', () => {
+    $btnSwitch.firstElementChild.classList.toggle("none");
+    $btnSwitch.lastElementChild.classList.toggle("none");
+	d.body.classList.toggle('dark');
+	$btnSwitch.classList.toggle('active');
+    $menu_dos.classList.toggle("is-active");
+    $btnMenu.firstElementChild.classList.toggle("none");
+    $btnMenu.lastElementChild.classList.toggle("none");
+
+	// Guardamos el modo en localstorage.
+	if(d.body.classList.contains('dark')){
+		localStorage.setItem('dark-mode', 'true');
+	} else {
+		localStorage.setItem('dark-mode', 'false');
+	}
+});
+
+// Obtenemos el modo actual.
+if(localStorage.getItem('dark-mode') === 'true'){
+	d.body.classList.add('dark');
+	$btnSwitch.classList.add('active');
+    $btnSwitch.firstElementChild.classList.remove("none");
+    $btnSwitch.lastElementChild.classList.add("none");
+} else {
+	d.body.classList.remove('dark');
+	$btnSwitch.classList.remove('active');
+    $btnSwitch.firstElementChild.classList.add("none");
+    $btnSwitch.lastElementChild.classList.remove("none");
+}
+})(document);
